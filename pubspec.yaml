@@ -1,9 +1,9 @@
-name: mustache
+name: mustache_no_mirror
 version: 0.1.8
-author: Greg Lowe <greg@vis.net.nz>
-description: Mustache template library
-homepage: https://github.com/xxgreg/mustache
+author: Dominique Locatelli <dominique.locatelli@doceapower.com>
+description: This is a fork of the library 'mustache' modified to remove calls to mirror API.
+homepage: https://github.com/dominique-locatelli/mustache-no-mirror
 environment:
-  sdk: ">=0.8.10+6 <2.0.0"
+  sdk: '>=0.8.10+6 <2.0.0'
 dev_dependencies:
-  unittest: ">=0.9.0 <0.10.0"
+  unittest: '>=0.9.0 <0.10.0'
