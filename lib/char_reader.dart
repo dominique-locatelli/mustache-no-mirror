@@ -1,4 +1,4 @@
-part of mustache;
+part of mustache_no_mirror;
 
 class _CharReader {
 

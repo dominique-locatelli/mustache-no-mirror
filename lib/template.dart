@@ -1,4 +1,4 @@
-part of mustache;
+part of mustache_no_mirror;
 
 final Object _NO_SUCH_PROPERTY = new Object();
 
@@ -155,24 +155,7 @@ class _Template implements Template {
 		if (object is List && _integerTag.hasMatch(name)) {
 			return object[int.parse(name)];
 		}
-		if (_lenient && !_validTag.hasMatch(name)) {
-			return _NO_SUCH_PROPERTY;
-		}
-		var instance = reflect(object);
-		var field = instance.type.instanceMembers[new Symbol(name)];
-		if (field == null) {
-			return _NO_SUCH_PROPERTY;
-		}
-		var invocation = null;
-		if ((field is VariableMirror) || ((field is MethodMirror) && (field.isGetter))) {
-			invocation = instance.getField(field.simpleName);
-		} else if ((field is MethodMirror) && (field.parameters.length == 0)) {
-			invocation = instance.invoke(field.simpleName, []);
-		}
-		if (invocation == null) {
-			return _NO_SUCH_PROPERTY;
-		}
-		return invocation.reflectee;
+		return _NO_SUCH_PROPERTY;
 	}
 
 	_renderVariable(node, {bool escape : true}) {

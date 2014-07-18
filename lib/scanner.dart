@@ -1,4 +1,4 @@
-part of mustache;
+part of mustache_no_mirror;
 
 //FIXME Temporarily made public for testing.
 //List<_Token> scan(String source, bool lenient) => _scan(source, lenient);
