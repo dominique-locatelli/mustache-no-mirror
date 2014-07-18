@@ -7,5 +7,5 @@ Because when using the mirror API with *dart2js*, the generated code is very lar
 
 
 ## What are the implications of this modification ?
-Without mirror API, the only way to retrieve the named properties is the *[]* operator, 
+Without the mirror API, the only way to retrieve named properties is the *[ ]* operator, 
 so the values objects passed to *render* methods must implement this operator.
