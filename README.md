@@ -1,6 +1,7 @@
 # Mustache no mirror
 This is a fork of the Dart library ['mustache'] (https://github.com/xxgreg/mustache) modified to remove calls to mirror API.
 
+[![Build Status](https://drone.io/github.com/dominique-locatelli/mustache-no-mirror/status.png)](https://drone.io/github.com/dominique-locatelli/mustache-no-mirror/latest)
 
 ## Why removing calls to mirror API ?
 Because when using the mirror API with *dart2js*, the generated code is very large ( 800kb -> 6Mb )
