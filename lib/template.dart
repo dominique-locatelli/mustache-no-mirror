@@ -189,7 +189,7 @@ class _Template implements Template {
 			value.forEach((v) => _renderSectionWithValue(node, v));
 		} else if (value is Map) {
 			_renderSectionWithValue(node, value);
-		} else if (value == true) {
+		} else if (value == true || value is String) {
 			_renderSectionWithValue(node, value);
 		} else if (value == false) {
 			// Do nothing.
@@ -214,7 +214,7 @@ class _Template implements Template {
 			_renderSectionWithValue(node, null);
 		} else if ((value is Iterable && value.isEmpty) || value == false) {
 			_renderSectionWithValue(node, value);
-		} else if (value == true || value is Map || value is Iterable) {
+		} else if (value == true || value is Map || value is Iterable || value is String) {
 			// Do nothing.
 		} else if (value == _NO_SUCH_PROPERTY) {
 			if (_lenient) {
